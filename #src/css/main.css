@@ -2021,8 +2021,8 @@ ul, ol {
 }
 .estimate__like {
   position: absolute;
-  top: 24%;
-  left: 8%;
+  top: 21%;
+  left: 9%;
   right: 0;
   margin: 0 auto;
   width: 100px;
@@ -2032,21 +2032,43 @@ ul, ol {
   .estimate__like {
     width: 80px;
     height: 70px;
-    top: 27%;
   }
 }
 @media (max-width: 1199.98px) {
   .estimate__like {
     width: 50px;
     height: 44px;
-    left: 13%;
-    top: 33%;
+    top: 25%;
+    left: 7%;
+  }
+}
+@media (max-width: 991.98px) {
+  .estimate__like {
+    left: 9%;
   }
 }
 @media (max-width: 767.98px) {
   .estimate__like {
     width: 27px;
     height: 24px;
+    top: 28%;
+    left: 8%;
+  }
+}
+@media (max-width: 575.98px) {
+  .estimate__like {
+    top: 27%;
+  }
+}
+@media (max-width: 479.98px) {
+  .estimate__like {
+    top: 25%;
+    left: 10%;
+  }
+}
+@media (max-width: 355.98px) {
+  .estimate__like {
+    top: 23%;
   }
 }
 

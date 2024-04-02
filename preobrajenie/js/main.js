@@ -38,7 +38,7 @@ if (menuBurgerOpen) {
 const inp = document.querySelectorAll('input[type=tel]')
 if (inp) {
   let maskoptions = {
-    "mask": "+7(000)000-00-00",  
+    "mask": "+7(999)999-99-99",  
     "showMaskOnHover": false, 
     "showMaskOnFocus": false,
   }
@@ -102,7 +102,7 @@ if (tabsPanel) {
 }
 // Yandex map
 function init1() {
-  let mapCenter = [56.3034682015124, 43.933365907409666];
+  let mapCenter = [56.351679, 43.870314];
   let mapMain = new ymaps.Map('map', {
     center: mapCenter,
     zoom: 16,
@@ -118,7 +118,7 @@ function init1() {
       provider: 'yandex#search',
       noPopup: true,
       noSuggestPanel: true,
-      boundedBy: [[56.31470576779187, 43.90511485464363], [56.292087803719355, 43.95300837881353]]
+      boundedBy: [[56.351678, 43.870313], [56.351680, 43.870315]]
     }
   });
   var searchControl1 = new ymaps.control.SearchControl({
@@ -126,7 +126,7 @@ function init1() {
       provider: 'yandex#search',
       noPopup: true,
       noSuggestPanel: true,
-      boundedBy: [[56.31470576779187, 43.90511485464363], [56.292087803719355, 43.95300837881353]]
+      boundedBy: [[56.351678, 43.870313], [56.351680, 43.870315]]
     }
   });
   mapPop.controls.add(searchControl1);
@@ -172,13 +172,13 @@ function init1() {
   mapMain.controls.remove('searchControl'); // удаляем поиск
   mapMain.controls.remove('trafficControl'); // удаляем контроль трафика
   mapMain.controls.remove('typeSelector'); // удаляем тип
-  mapPop.geoObjects.add(new ymaps.Placemark([56.3034682015124, 43.933365907409666], {
+  mapPop.geoObjects.add(new ymaps.Placemark([56.351679, 43.870314], {
     iconCaption: 'ЖК Преображение'
   }, {
     preset: 'islands#redHomeIcon',
     iconColor: 'green'
   }));
-  mapMain.geoObjects.add(new ymaps.Placemark([56.3034682015124, 43.933365907409666], {
+  mapMain.geoObjects.add(new ymaps.Placemark([56.351679, 43.870314], {
     iconCaption: 'ЖК Преображение'
   }, {
     preset: 'islands#redHomeIcon',
@@ -201,7 +201,7 @@ if (document.querySelector('#map')) {
 }
 // Yandex map
 function init2() {
-  let mapCenter = [56.32877217433268, 43.90089356707584];
+  let mapCenter = [56.351679, 43.870314];
   let map = new ymaps.Map('map1', {
     center: mapCenter,
     zoom: 13,
@@ -219,9 +219,6 @@ function init2() {
   });
   searchControl.search('Продукты');
 
-  // let placemark = new ymaps.Placemark([56.3034682015124,43.933365907409666], {}, {
-  // })
-
   // map.controls.remove('geolocationControl'); // удаляем геолокацию
   map.controls.remove('searchControl'); // удаляем поиск
   map.controls.remove('trafficControl'); // удаляем контроль трафика
@@ -233,12 +230,12 @@ function init2() {
 
   map.geoObjects
   // .add(placemark)
-  .add(new ymaps.Placemark([56.3034682015124, 43.933365907409666], {
+  .add(new ymaps.Placemark([56.351679, 43.870314], {
     iconCaption: 'ЖК Преображение'
   }, {
     preset: 'islands#redHomeIcon',
     iconColor: 'green'
-  })).add(new ymaps.Placemark([56.34624200424052, 43.86168999999998], {
+  })).add(new ymaps.Placemark([56.351679, 43.870314], {
     iconCaption: 'Главный офис'
   }, {
     preset: 'islands#redHomeIcon',
