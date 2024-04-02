@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include("_head.html")
+
+<body class="page__body">
+@@include("_header.html")
+
+    <main class="main">
+      <div class="container">
+        <div class="page__hat">
+          <div class="page__breadcrumbs">
+            <a href="#">Главная</a>
+            <a href="#">Ипотека</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="banks">
+        <div class="container">
+          <h2 class="con-intro__title">Наш жилой комплекс аккредитован в ведущих банках России</h2>
+          <div class="banks__items">
+            <div class="banks__line banks__line-first">
+              <img class="banks__item" src="img/pages/banks/logo_1.png" alt="">
+              <img class="banks__item" src="img/pages/banks/logo_2.png" alt="">
+              <img class="banks__item" src="img/pages/banks/logo_3.png" alt="">
+            </div>
+            <div class="banks__line banks__line-second">
+              <img class="banks__item" src="img/pages/banks/logo_4.png" alt="">
+              <img class="banks__item" src="img/pages/banks/logo_5.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mort">
+        <div class="container">
+          <div class="mort__body">
+            <div class="mort__img">
+              <picture>
+                <source srcset="img/pages/banks/mort.webp" type="image/webp">
+                <img loading="lazy" src="img/pages/banks/mort.png" class="image" width="" height="" alt="">
+              </picture>
+            </div>
+            <h3 class="title-h3 mort__title">Ипотека — это один из популярных видов целевого кредитования на долгий срок под залог имущества.</h3>
+            <span class="mort__text">Реальность такова, что для многих россиян именно ипотека является единственной возможностью приобрести своё жильё. И это, пожалуй, самый главный плюс. Кроме этого ипотека позволяет приобрести своё жильё достаточно быстро.</span>
+          </div>
+        </div>
+      </section>
+      <section class="mort-ways">
+        <div class="container">
+          <div class="ways__hat">
+            <h2 class="ways__title title-h2">Требования к заёмщику в основном включают в себя</h2>
+            <div class="ways__list">
+              <ul>
+                <li>
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#arrow_right"></use>
+                  </svg>
+                  Возраст не моложе 21 и не старше 65 лет,
+                </li>
+                <li>
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#arrow_right"></use>
+                  </svg>
+                  Наличие стабильной работы,
+                </li>
+                <li>
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#arrow_right"></use>
+                  </svg>
+                  Уровень дохода в семье, позволяющий выплачивать ежемесячный платёж,
+                </li>
+                <li>
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#arrow_right"></use>
+                  </svg>
+                  Зачастую требуются средства на первоначальный взнос и наличие созаёмщиков.
+                </li>
+                <li>
+                  <svg class="">
+                    <use xlink:href="img/sprite.svg#arrow_right"></use>
+                  </svg>
+                  Кроме этого, в нашей стране действует ряд программ государственной поддержки, например, военная, семейная и льготная ипотека.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="req-end">
+        <section class="req">
+  <div class="container-header">
+    <h2 class="title-h2 req__title">Оставьте заявку</h2>
+  </div>
+  <div class="req__back">
+    <div class="req__container">
+      <div class="req__content">
+        <h4 class="req__subtitle">Наши менеджеры отдела продаж с удовольствием расскажут вам все подробности, помогут подобрать наиболее выгодный вариант и сделают расчёт!</h4>
+        <div class="req__form">
+          <form action="">
+            <div class="input">
+              <span class="input__placeholder">Имя</span>
+              <input type="text">
+            </div>
+            <div class="input">
+              <span class="input__placeholder">Телефон</span>
+              <input class="phone" type="tel">
+            </div>
+            <button class="btn-white">Оставить заявку</button>
+            <span class="req__agree">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциалности</a></span>
+          </form>
+        </div>
+        <div class="req__img">
+          <picture>
+            <source srcset="img/pages/main/req.webp" type="image/webp">
+            <img loading="lazy" src="img/pages/main/req.jpg" class="image" width="" height="" alt="">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </div>
+    </main>
+@@include("_footer.html")
+
+@@include("_menu.html")
+
+@@include("_modal.html")
+</body>
+
+</html>

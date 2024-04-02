@@ -1,0 +1,64 @@
+//@import "fonts";
+@import "null";
+/* @import "vars";
+@import "general";
+@import "preloader";
+@import "header";
+@import "breadcrumbs";
+@import "404";
+@import "about";
+@import "modal";
+@import "footer"; */
+.swiper {
+    min-width: 0;
+}
+[data-block] {
+    transition: all .3s linear;
+}
+.map [class*=copyrights-pane] {
+    display: none;
+}
+
+.map [class*=controls__control] {
+    display: none
+}
+.map__nav.tabs {
+    position: absolute;
+    top: -1px;
+    width: calc(100% - 160px);
+    max-width: 1400px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    @media (max-width: 1199.98px) {
+        width: calc(100% - 80px);
+    }
+    @media (max-width: 767.98px) {
+        width: calc(100% - 40px);
+    }
+}
+.tabs__nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tabs__nav-item {
+    flex: 1;
+    width: auto;
+}
+.tabs__nav-btn {
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.req__form .input__placeholder {
+     @media (max-width: 1400px){
+        font-size: 20px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 18px;
+    }
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+}
