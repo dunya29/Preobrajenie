@@ -28,8 +28,10 @@ if (menuBurgerOpen) {
     menuMobile.classList.add('menu--active');
   });
   menuBurgerClose.addEventListener('click', () => {
-    enableScroll()
     menuMobile.classList.remove('menu--active');
+    setTimeout(() => {
+      enableScroll()
+    }, 500);
   });
 }
 //mask input

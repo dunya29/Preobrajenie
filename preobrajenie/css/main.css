@@ -192,9 +192,16 @@ ul, ol {
   margin: 0 auto;
 }
 @media (max-width: 767.98px) {
+  .title-main {
+    position: relative;
+  }
+  .container-title {
+    position: static;
+  }
   .container-title img {
     max-width: 304px;
-    transform: translateY(37%);
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -1320,6 +1327,9 @@ ul, ol {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 .footer-item:not(:last-child) {
   margin-bottom: 56px;
