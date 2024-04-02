@@ -115,16 +115,6 @@ input[type=number] {
   opacity: 1;
 }
 
-/* @import "vars";
-@import "general";
-@import "preloader";
-@import "header";
-@import "breadcrumbs";
-@import "404";
-@import "about";
-@import "modal";
-@import "footer"; */
-
 .swiper {
   min-width: 0;
 }
@@ -174,6 +164,17 @@ input[type=number] {
   box-sizing: border-box;
   padding-left: 12px;
   padding-right: 12px;
+}
+
+.motion__slide {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 @media (max-width: 1400px) {
