@@ -78,24 +78,25 @@ const tabsPanel = document.querySelectorAll(".motion .tabs__panel")
 if (tabsPanel) {
   tabsPanel.forEach(item => {
     const itemSwiper = new Swiper(item.querySelector(".swiper"), {
-      slidesPerView: '3',
+      slidesPerView: '2',
+      spaceBetween: 8,
+      simulateTouch: true,
+      watchSlidesProgress: true,
+      observer: true,
+      observeParents: true,
       navigation: {
         nextEl: item.querySelector(".motion__swiper-button-next"),
         prevEl: item.querySelector(".motion__swiper-button-prev")
       },
-      spaceBetween: 8,
-      simulateTouch: true,
-      slidesPerView: '2',
-      watchSlidesProgress: true,
       breakpoints: {
-        768: {
+        1199.98: {
+          spaceBetween: 32,
+          slidesPerView: '3'
+        },
+        767.98: {
           slidesPerView: '3',
           spaceBetween: 16
         },
-        1200: {
-          spaceBetween: 32,
-          slidesPerView: '3'
-        }
       }
     });
   })
@@ -557,9 +558,11 @@ class GraphTabs {
 }
 const modal = new GraphModal();
 const motion = document.querySelector('.motion');
+//swhitch tab
 if (motion) {
   const tabs = new GraphTabs('motion');
 }
+
 //news swiper
 let initNews = false
 let newsSwiper
@@ -583,6 +586,7 @@ if (news) {
   initNewsSwiper()
   window.addEventListener("resize", initNewsSwiper)
 }
+
 
 
 
