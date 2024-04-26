@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link type="image/png" sizes="32x32" rel="icon" href="img/favicon/favicon-32x32.png">
+    <link type="image/png" sizes="192x192" rel="icon" href="img/favicon/android-icon-192x192.png">
+    <link sizes="120x120" rel="apple-touch-icon" href="img/favicon/apple-icon-120x120.png">
+    <link sizes="180x180" rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#111111">
     <title>ЖК Преображение</title>
     <link rel="preload" href="fonts/FiraSansCondensed-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
@@ -17,6 +23,7 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="js/libs/jquery.min.js"></script>
     <script defer src="js/libs/swiper.min.js"></script>
     <script defer src="js/libs/nouislider.min.js"></script>
     <script defer src="js/libs/choices.min.js"></script>
@@ -25,7 +32,7 @@
   </head>
 
 <body class="page__body">
-<header class="header">
+  <header class="header">
     <div class="container-header">
       <div class="header__content">
         <div class="header__menu">
@@ -41,126 +48,119 @@
       </div>
     </div>
 </header>
-
-    <main class="main">
+  <main class="main">
+    <div class="container">
+      <div class="page__hat">
+        <div class="page__breadcrumbs">
+          <a href="#">Главная</a>
+          <a href="#">Документы</a>
+        </div>
+        <h1 class="title-h1 page__title centered">Документы</h1>
+      </div>
+    </div>
+    <section class="docs">
       <div class="container">
-        <div class="page__hat">
-          <div class="page__breadcrumbs">
-            <a href="#">Главная</a>
-            <a href="#">Документы</a>
+        <div class="docs__items">
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">Устав ООО "Специализированный Застройщик "СтройСити НН"</h4>
+            <span class="docs-item__size">PDF 3.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class=""><use xlink:href="img/sprite.svg#arrow_down"></use></svg>
+            </a>
           </div>
-          <h1 class="title-h1 page__title centered">Документы</h1>
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">Проектная декларация</h4>
+            <span class="docs-item__size">PDF 32.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class="">
+                <use xlink:href="img/sprite.svg#arrow_down"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">Разрешение на строительство</h4>
+            <span class="docs-item__size">PDF 3.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class="">
+                <use xlink:href="img/sprite.svg#arrow_down"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">Схема планировочной организации земельного участка</h4>
+            <span class="docs-item__size">PDF 3.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class="">
+                <use xlink:href="img/sprite.svg#arrow_down"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">Положительное заключение экспертизы</h4>
+            <span class="docs-item__size">PDF 3.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class="">
+                <use xlink:href="img/sprite.svg#arrow_down"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">ГПЗУ</h4>
+            <span class="docs-item__size">PDF 3.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class="">
+                <use xlink:href="img/sprite.svg#arrow_down"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">Устав ООО "СтройСити НН"</h4>
+            <span class="docs-item__size">PDF 3.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class=""><use xlink:href="img/sprite.svg#arrow_down"></use></svg>
+            </a>
+          </div>
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">Бухгалтерская отчетность</h4>
+            <span class="docs-item__size">PDF 3.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class="">
+                <use xlink:href="img/sprite.svg#arrow_down"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="docs-item">
+            <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
+            <h4 class="title-h4 docs-item__title">Аудиторское заключение</h4>
+            <span class="docs-item__size">PDF 3.4 MB</span>
+            <a href="#" download="" class="text-btn docs-item__btn">
+              Скачать
+              <svg class="">
+                <use xlink:href="img/sprite.svg#arrow_down"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-
-      <section class="docs">
-        <div class="container">
-          <div class="docs__items">
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">Устав ООО «Специализированный застройщик „ВолгаИнвестГрупп“</h4>
-              <span class="docs-item__size">PDF 3.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">Проектная декларация</h4>
-              <span class="docs-item__size">PDF 32.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">Разрешение на строительство</h4>
-              <span class="docs-item__size">PDF 3.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">Схема планировочной организации земельного участка</h4>
-              <span class="docs-item__size">PDF 3.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">Положительное заключение экспертизы</h4>
-              <span class="docs-item__size">PDF 3.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">ГПЗУ</h4>
-              <span class="docs-item__size">PDF 3.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">Устав ООО «Волгаинвестгрупп»</h4>
-              <span class="docs-item__size">PDF 3.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">Бухгалтерская отчетность</h4>
-              <span class="docs-item__size">PDF 3.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-            <div class="docs-item">
-              <img class="docs-item__icon" src="img/icons/doc.svg" alt="">
-              <h4 class="title-h4 docs-item__title">Аудиторское заключение</h4>
-              <span class="docs-item__size">PDF 3.4 MB</span>
-              <a href="#" download="" class="text-btn docs-item__btn">
-                Скачать
-                <svg class="">
-                  <use xlink:href="img/sprite.svg#arrow_down"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-<footer class="footer">
+    </section>
+  </main>
+  <footer class="footer">
     <div class="container">
       <div class="footer__content">
         <img src="img/pages/logo_white.svg" alt="" class="footer__logo">
@@ -208,9 +208,8 @@
         </div>
       </div>
     </div>
-</footer>
-
-<div class="menu">
+</footer> 
+  <div class="menu">
     <div class="menu__body">
         <div class="container-header menu__container">
             <button class="menu__close" type="">
@@ -267,18 +266,17 @@
                     </a>
                     <div class="menu__request">
                         <span>Не нашли нужной информации? <span>Мы поможем:</span></span>
-                        <button class="btn-green" data-graph-path="popup-req">Оставить заявку</button>
+                        <button class="btn-green modal-show-btn" data-modal="popup-req">Оставить заявку</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<div class="graph-modal">
-    <div class="graph-modal__container popup-req" role="dialog" aria-modal="true" data-graph-target="popup-req">
-        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-        <div class="graph-modal__content">
+  <div class="modal popup-req" id="popup-req">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close" aria-label="Закрыть модальное окно"></button>
             <div class="popup-req__hat">
                 <h3 class="popup-req__title">Оставьте заявку</h3>
                 <h4 class="popup-req__subtitle">на бронирование квартиры</h4>
@@ -287,18 +285,25 @@
                 <span class="req__agree">Наши менеджеры отдела продаж с удовольствием расскажут вам все
                     подробности</span>
                 <div class="req__form">
-                    <form action="">
-                        <div class="input">
-                            <span class="input__placeholder">Имя</span>
-                            <input type="text">
+                    <form action="" onsubmit="event.preventDefault();formSuccess(this)">
+                        <div class="item-form error">
+                            <div class="input">
+                                <span class="input__placeholder">Имя</span>
+                                <input type="text">
+                            </div>
+                            <div class="item-form__error">Введите имя</div>
                         </div>
-                        <div class="input">
-                            <span class="input__placeholder">Телефон</span>
-                            <input class="phone" type="tel">
+                        <div class="item-form">
+                            <div class="input">
+                                <span class="input__placeholder">Телефон</span>
+                                <input class="phone" type="tel">
+                            </div>
+                            <div class="item-form__error"></div>
                         </div>
                         <button class="btn-green" type="submit">Оставить заявку</button>
-                        <span class="req__agree">Нажимая на кнопку «Оставить заявку», я даю согласие на <a
-                                href="#" target="_blank">обработку персональных данных</a> и условия <a href="#" target="_blank">политики
+                        <span class="req__agree">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#"
+                                target="_blank">обработку персональных данных</a> и условия <a href="#"
+                                target="_blank">политики
                                 конфиденциалности</a></span>
                     </form>
                 </div>
@@ -306,6 +311,45 @@
         </div>
     </div>
 </div>
+<div class="modal error-modal" id="error-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close" aria-label="Закрыть модальное окно"></button>
+            <div class="popup-req__hat">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" rx="50" fill="white" />
+                    <path
+                        d="M55.293 65.6445H44.668L41.7578 14.1406H58.2617L55.293 65.6445ZM58.1641 77.6563C58.1641 78.8086 57.9492 79.8828 57.5195 80.8789C57.0898 81.875 56.5039 82.7539 55.7812 83.4766C55.0391 84.1992 54.1992 84.7852 53.2031 85.2148C52.2266 85.6445 51.1719 85.8594 50.0586 85.8594C48.9453 85.8594 47.8516 85.6445 46.8555 85.2148C45.8789 84.7852 45 84.1992 44.2578 83.4766C43.5156 82.7344 42.9297 81.875 42.5 80.8789C42.0703 79.8828 41.8555 78.8086 41.8555 77.6563C41.8555 76.5039 42.0703 75.4883 42.5 74.5117C42.9297 73.5352 43.5156 72.6758 44.2578 71.9336C45 71.2109 45.8789 70.625 46.8555 70.1953C47.832 69.7656 48.9062 69.5508 50.0586 69.5508C51.2109 69.5508 52.2266 69.7656 53.2031 70.1953C54.1797 70.625 55.0391 71.2109 55.7812 71.9336C56.5039 72.6758 57.0898 73.5156 57.5195 74.5117C57.9492 75.4883 58.1641 76.543 58.1641 77.6563Z"
+                        fill="#1F5F5B" />
+                </svg>
+            </div>
+            <div class="popup-req__body popup-success__body">
+                <h3 class="title-h3">Упс! <br> Что-то пошло не так</h3>
+                <span class="req__agree">Пожалуйста, попробуйте снова</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal success-modal" id="success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close" aria-label="Закрыть модальное окно"></button>
+            <div class="popup-req__hat">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" rx="50" fill="white" />
+                    <path
+                        d="M39.792 75.0002L16.042 51.2502L21.9795 45.3127L39.792 63.1252L78.0212 24.896L83.9587 30.8335L39.792 75.0002Z"
+                        fill="#1F5F5B" />
+                </svg>
+            </div>
+            <div class="popup-req__body popup-success__body">
+                <h3 class="title-h3">Заявка успешно принята!</h3>
+                <span class="req__agree">Наши менеджеры скоро с вами свяжутся</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>

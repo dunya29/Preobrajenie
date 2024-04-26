@@ -19,9 +19,23 @@
             transition: all .3s .1s ease-out;
         }
     }
-    h3 {
-        margin-bottom: 40px;
-        text-align: center;
+    .req__agree {
+        font-size: 20px;
+        @media (max-width: $bp1) {
+            font-size: 18px;
+        }
+        @media (max-width: $bp2) {
+            font-size: 16px;
+        }
+        @media (max-width: $bp4) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+    .req__form input {
+        @media (max-width: $bp2) {
+            padding: 16px 24px;
+        }
     }
     &__overlay {
         padding: 40px 20px;
@@ -35,47 +49,282 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0, 0.6);
-        overflow: auto;
+        background-color: rgba(6, 55, 58, 0.5);
+        backdrop-filter: blur(3px);
+        overflow: hidden;
+        overflow-y: auto;
     }
     &__content {
         width: 100%;
-        max-width: 640px;
-        padding: 40px 48px;
+        max-width: 610px;
         margin: auto;
         background: $white;
-        border-radius: 4px;
         position: relative;
-        overflow: hidden;
         opacity: 0;
         transform: translateY(30px);
         transition: all .3s ease-out;
+        @media (max-width: $bp1) {
+            max-width: 580px;
+        }
+        @media (max-width: $bp2) {
+            max-width: 460px;
+        }
     }
     &__close {
-        width: 24px;
-        height: 24px;
-        background: url(../img/icons/close.svg) center no-repeat;
-        cursor: pointer;
+        width: 40px;
+        height: 40px;
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: 10px;
+        top: 10px;
+        border: none;
+        padding: 0;
+        background: url(../img/icons/close_popup.svg) center/contain no-repeat;
+        cursor: pointer;
+        @media (max-width: $bp4) {
+            top: -50px;
+            right: 0
+        }
     }
 }
-.fancy-modal {
+.error-modal, .success-modal {
+    .title-h3 {
+        max-width: 407px;
+        @media (max-width: $bp1) {
+            max-width: 365px;
+        }
+        @media (max-width: $bp4) {
+            max-width: 222px;
+        }
+    }
+    .req__agree {
+        font-size: 24px;
+        @media (max-width: $bp1) {
+            font-size: 22px;
+        }
+        @media (max-width: $bp2) {
+            font-size: 16px;
+        }
+        @media (max-width: $bp4) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+}
+.scheme-popup {
     .modal__content {
-        max-width: 1300px;
-        padding: 50px 110px 30px;
-        border-radius: 8px;
+        max-width: 570px;
+    }
+    &__content {
+        padding: 20px;
+        h5,h6 {
+            font-weight: 400;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            span {
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+        }
+        h5 {
+            justify-content: space-between;
+        }
+        h6 span {
+            color: rgba(49, 53, 52, .6);
+        }
+    }
+    &__preview {
+        display: block;
+        margin-bottom: 10px;
+    }
+    &__price {
+        font-weight: 600;
+        color: #06373A;
+    }
+    @media (min-width: $bp3) {
+        width: 331px;
+        height: auto;
+        box-shadow: 0 16px 26px -11px rgba(0, 0, 0, .25);
+        background: #fff;
+        backdrop-filter: none;
+        border-radius: 4px;
+        transition: all 0s !important;
+        &:before {
+            content: none;
+        }
+        .modal__close, .stroke-btn {
+            display: none;
+        }
+        .modal__overlay {
+            padding: 0;
+            height: auto;
+            position: static;        
+        }
+        .modal__content {
+            transition: all 0s !important;
+        }
+    }
+    @media (max-width: $bp3) {
+        top: 0!important;
+        left: 0!important;
+        .modal__content {
+            padding: 30px;
+        }
+        &__content {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 0;
+            h5 {
+                font-size: 22px;
+                margin-bottom: 3px;
+            }
+            h6 {
+                font-size: 18px;
+            }
+        }
+        &__price {
+            font-size: 22px;
+        }
+        &__footer {
+            text-align: center;
+            .stroke-btn {
+                font-family: Arial;
+                font-size: 18px;
+                color: #2A9D90;
+                text-transform: uppercase;
+                padding: 12px 40px;
+                border: 1px solid #2A9D90;
+                border-radius: 10px;
+                display: inline-flex;
+                margin-top: 16px;
+            }
+        }
+    }
+    @media (max-width: $bp4) {
+        .modal__content {
+            padding: 24px 16px;
+        }
+        &__preview {
+            margin-bottom: 20px;
+        }
+        &__footer .stroke-btn {
+            font-size: 16px;
+        }
+    }
+}
+.filter-form {
+    &__btn--submit {
+        display: none;
+    }
+    .modal__content {
+        padding: 40px 24px;
+    }
+    @media (min-width: $bp3) {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+        height: auto;
+        .modal__overlay {
+            position: static;
+            padding: 0;
+            height: auto;
+            backdrop-filter: none;
+        }
+        .modal__content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .modal__close {
+            display: none;
+        }
+    }
+    @media (max-width: $bp1) {
+        .modal__content {
+            padding: 30px 24px;
+        }
+    }
+    @media (max-width: $bp3) {
+        .modal__content {
+            max-width: 413px;
+            padding: 30px;
+        }
+        &__btn--reset {
+            display: none;
+        }
+        &__btn--submit {
+            display: flex;
+        }
+    }
+    @media (max-width: $bp4) {
+        padding: 16px 24px;
+        &__title {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+    }
+}
+.mob-modal .modal__close {
+    display: none;
+    @media (max-width: $bp3) {
+        display: block;
+        top: -50px;
+        right: 0;
+    };
+}
+.fancy-modal {
+    overflow: hidden;
+    .modal__overlay {
+        padding: 60px 80px 30px;
+        @media(max-width: $bp2) {
+            padding-left: 40px;
+            padding-right: 40px;;
+        }
+        @media(max-width: $bp4) {
+            padding-left: 0;
+            padding-right: 0
+        }
+    }
+    .modal__content {
+        max-width: 1399px;
+        background: transparent;
     }
     .modal__close {
-        top: 12px;
-        right: 12px;
+        top: -60px;
+        right: 0;
+        @media(max-width: $bp4) {
+            right: 20px
+        }
+    }
+    .swiper {
+        width: 100%;
+        overflow: visible;
+    }
+    .swiper-slide {
+        position: relative;
+        background: #fff;
+        p {
+            font-family: Arial;
+            font-size: 20px;
+            position: absolute;
+            top: 24px;
+            left: 32px;
+            @media(max-width: $bp4) {
+                font-size: 16px;
+                top: 12px;
+                left: 12px;
+            }
+        }
     }
     .swiper-img {
         width: 100%;
+        height: 800px;
         position: relative;
-        border-radius: 4px;
         overflow: hidden;
+        @media (max-width: $bp1) {
+            height: auto;
+            padding-top: 69%;
+        }
         img {
          position: absolute;
          top: 0;
@@ -93,19 +342,6 @@
                 object-fit: contain;
             }
         }
-    }
-    .swiper-btn {
-        width: 56px;
-        height: 56px;
-        position: absolute;
-        top: 34.3%;
-        z-index: 2;
-    }
-    .swiper-btn--prev {
-        left: 15px;
-    }
-    .swiper-btn--next {
-        right: 15px;
     }
 }
 .fancybox-bg {

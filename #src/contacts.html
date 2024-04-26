@@ -16,75 +16,74 @@
           <h1 class="title-h1 page__title">Контакты</h1>
         </div>
       </div>
-
       <section class="contacts">
         <div class="container">
           <div class="contacts__body">
             <div class="footer__right menu__info">
               <div class="footer-item">
                 <span class="footer-item__title">Главный офис</span>
-                <span class="footer-item__subtitle">г Нижний Новгород, ул Павла Мочалова, д. 11, помещ. п1; оф. 3</span>
+                <span class="footer-item__subtitle">г. Нижний Новгород, ул. Павла Мочалова, дом 11, помещение 1. 603003</span>
+              </div>
+              <div class="footer-item">
+                <span class="footer-item__title">Контактный номер</span>
+                <a href="tel:89300568560" class="footer-item__subtitle">+7 930 056-85-60</a>
               </div>
               <div class="footer-item">
                 <span class="footer-item__title">Часы работы</span>
                 <span class="footer-item__subtitle">c 9 до 18 Пн-Пт</span>
               </div>
               <div class="footer-item">
-                <span class="footer-item__title">Контактный номер</span>
-                <a href="tel:+79005676767" class="footer-item__subtitle">+7 (90) 05-67-67-67</a>
-              </div>
-              <div class="footer-item">
                 <span class="footer-item__title">Адрес почты</span>
-                <a href="mailto:Volga.net" class="footer-item__subtitle">Volga.net</a>
+                <a href="mailto:ssity2023@list.ru" class="footer-item__subtitle">ssity2023@list.ru</a>
               </div>
             </div>
-            <div class="contacts__map" id="map1"></div>
+            <div class="map contacts__map" id="map2"></div>
           </div>
         </div>
       </section>
-
-      <div class="req-end">
-        <section class="req">
-  <div class="container-header">
-    <h2 class="title-h2 req__title">Оставьте заявку</h2>
-  </div>
-  <div class="req__back">
-    <div class="req__container">
-      <div class="req__content">
-        <h4 class="req__subtitle">Наши менеджеры отдела продаж с удовольствием расскажут вам все подробности, помогут подобрать наиболее выгодный вариант и сделают расчёт!</h4>
-        <div class="req__form">
-          <form action="">
-            <div class="input">
-              <span class="input__placeholder">Имя</span>
-              <input type="text">
-            </div>
-            <div class="input">
-              <span class="input__placeholder">Телефон</span>
-              <input class="phone" type="tel">
-            </div>
-            <button class="btn-white">Оставить заявку</button>
-            <span class="req__agree">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциалности</a></span>
-          </form>
+      <section class="req req-end">
+        <div class="container-header">
+          <h2 class="title-h2 req__title">Оставьте заявку</h2>
         </div>
-        <div class="req__img">
-          <picture>
-            <source srcset="img/pages/main/req.webp" type="image/webp">
-            <img loading="lazy" src="img/pages/main/req.jpg" class="image" width="" height="" alt="">
-          </picture>
+        <div class="req__back">
+          <div class="req__container">
+            <div class="req__content">
+              <h4 class="req__subtitle">Наши менеджеры отдела продаж с удовольствием расскажут вам все подробности, помогут подобрать наиболее выгодный вариант и сделают расчёт!</h4>
+              <div class="req__form">
+                <form action="" onsubmit="event.preventDefault();formSuccess(this)">
+                  <div class="item-form">
+                    <div class="input">
+                      <span class="input__placeholder">Имя</span>
+                      <input type="text">
+                    </div>
+                    <div class="item-form__error"></div>
+                  </div>
+                  <div class="item-form">
+                    <div class="input">
+                      <span class="input__placeholder">Телефон</span>
+                      <input class="phone" type="tel">
+                    </div>
+                    <div class="item-form__error"></div>
+                  </div>
+                  <button class="btn-white">Оставить заявку</button>
+                  <span class="req__agree">Нажимая на кнопку «Оставить заявку», я даю согласие на <a href="#">обработку персональных данных</a> и условия <a href="#">политики конфиденциалности</a></span>
+                </form>
+              </div>
+              <div class="req__img">
+                <picture>
+                  <source srcset="img/pages/main/req.webp" type="image/webp">
+                  <img loading="lazy" src="img/pages/main/req.jpg" class="image" width="" height="" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      </div>
+      </section>
     </main>
-@@include("_footer.html")
-
-@@include("_menu.html")
-
-@@include("_modal.html")
-    <script src="https://api-maps.yandex.ru/2.1.79/?apikey=d889cf05-49b0-4f2f-b7a7-17edfafbf91b&lang=ru_RU"></script>
+    @@include("_footer.html")  
+    @@include("_menu.html")   
+    @@include("_modal.html")
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d889cf05-49b0-4f2f-b7a7-17edfafbf91b&lang=ru_RU" type="text/javascript"></script>
 </body>
 
 </html>
