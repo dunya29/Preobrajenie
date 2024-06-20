@@ -262,3 +262,15 @@ h5,.h5 {
 h6,.h6 {
     font-size: 20px;
 }
+.menu__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @media (max-width: 767.98px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.menu__request {
+    margin-left: auto;
+}

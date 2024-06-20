@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 button,
 label {
   cursor: pointer;
@@ -547,10 +549,10 @@ input[type=number] {
 
 .item-apartaments a {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 114px;
-  flex: 0 0 114px;
-  width: 114px;
-  height: 45px;
+  -ms-flex: 0 0 112px;
+  flex: 0 0 112px;
+  width: 112px;
+  height: 43px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,6 +570,7 @@ input[type=number] {
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
@@ -614,7 +617,7 @@ input[type=number] {
 
 .item-apartaments a.sold {
   color: rgba(152, 152, 152, 0.2);
-  border: 1px solid rgba(49, 53, 52, 0.2);
+  border-color: rgba(49, 53, 52, 0.2);
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -940,7 +943,7 @@ input[type=number] {
 
 .filter-range__amount input {
   width: 100%;
-  max-width: 43px;
+  max-width: 55px;
 }
 
 .plan-cat {
@@ -1037,6 +1040,46 @@ input[type=number] {
   -ms-flex-pack: start;
   justify-content: flex-start;
   min-width: 0;
+}
+
+.filter-form__room span {
+  font-size: 42px;
+  line-height: 1;
+  color: #2A9D90;
+  width: 63px;
+  height: 63px;
+  border: 1px solid #1F5F5B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.filter-form__room span:after {
+  content: "ккв";
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+
+.filter-form__room span:hover {
+  color: #ffffff;
+  background: #2A9D90;
+  border-color: #2A9D90;
+}
+
+.filter-form__room input:checked + span {
+  color: #ffffff;
+  background: #125766;
+  border-color: #125766;
 }
 
 .product {
@@ -1300,6 +1343,22 @@ h6,
   font-size: 20px;
 }
 
+.menu__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.menu__request {
+  margin-left: auto;
+}
+
 @media (min-width: 767.98px) {
   .filter__mob {
     -webkit-box-flex: 1;
@@ -1428,9 +1487,9 @@ h6,
 
   .item-apartaments a {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 84px;
-    flex: 0 0 84px;
-    width: 84px;
+    -ms-flex: 0 0 82px;
+    flex: 0 0 82px;
+    width: 82px;
   }
 
   .catalog-plan__thumbswiper {
@@ -1557,9 +1616,9 @@ h6,
 
   .item-apartaments a {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 73px;
-    flex: 0 0 73px;
-    width: 73px;
+    -ms-flex: 0 0 71px;
+    flex: 0 0 71px;
+    width: 71px;
   }
 
   .parking {
@@ -2044,7 +2103,7 @@ h6,
   }
 
   .item-apartaments a {
-    height: 43px;
+    height: 41px;
   }
 
   .catalog__tabs {
@@ -2151,6 +2210,16 @@ h6,
     overflow: visible;
   }
 
+  .filter-form__room span {
+    width: 56px;
+    height: 56px;
+    font-size: 37px;
+  }
+
+  .filter-form__room span:after {
+    font-size: 16px;
+  }
+
   .product__swipers {
     display: block;
   }
@@ -2207,6 +2276,16 @@ h6,
 
   .con-info {
     margin-top: 70px;
+  }
+
+  .menu__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 

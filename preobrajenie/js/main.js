@@ -173,99 +173,99 @@ if (tabsPanel) {
 }
 // Yandex map
 function init1() {
-  let mapCenter = [56.351679, 43.870314];
-  let mapMain = new ymaps.Map('map', {
-    center: mapCenter,
-    zoom: 16,
-    controls: []
-  });
-  let mapPop = new ymaps.Map('map-popup', {
-    center: mapCenter,
-    zoom: 16,
-    controls: []
-  });
-  var searchControl = new ymaps.control.SearchControl({
-    options: {
-      provider: 'yandex#search',
-      noPopup: true,
-      noSuggestPanel: true,
-      boundedBy: [[56.351678, 43.870313], [56.351680, 43.870315]]
-    }
-  });
-  var searchControl1 = new ymaps.control.SearchControl({
-    options: {
-      provider: 'yandex#search',
-      noPopup: true,
-      noSuggestPanel: true,
-      boundedBy: [[56.351678, 43.870313], [56.351680, 43.870315]]
-    }
-  });
-  mapPop.controls.add(searchControl1);
-  mapMain.controls.add(searchControl);
-  searchControl.search('Магазины');
-  searchControl1.search('Магазины');
-  const mapTab = document.querySelector('.map__nav');
-  const mapTabs = mapTab.querySelectorAll('.tabs__nav-btn');
-  const mapTabPopup = document.querySelector('.map__nav-popup');
-  const mapTabsPopup = mapTabPopup.querySelectorAll('.tabs__nav-btn');
-  mapTabs.forEach((el,idx) => {
-    el.addEventListener('click', () => {
-      mapTabs.forEach(elem => {
-        elem.classList.remove('active');
-      });
-      mapTabsPopup.forEach(elem => {
-        elem.classList.remove('active');
-      });
-      searchControl.search(el.getAttribute("data-map"));
-      searchControl1.search(el.getAttribute("data-map"));
-      mapTabs[idx].classList.add('active');
-      mapTabsPopup[idx].classList.add('active');
+    let mapCenter = [56.351679, 43.873314];
+    let mapMain = new ymaps.Map('map', {
+      center: mapCenter,
+      zoom: 16,
+      controls: []
     });
-  });
-  mapTabsPopup.forEach((el,idx) => {
-    el.addEventListener('click', () => {
-      mapTabsPopup.forEach(elem => {
-        elem.classList.remove('active');
-      });
-      mapTabs.forEach(elem => {
-        elem.classList.remove('active');
-      });
-      searchControl.search(el.getAttribute("data-map"));
-      searchControl1.search(el.getAttribute("data-map"));
-      mapTabs[idx].classList.add('active');
-      mapTabsPopup[idx].classList.add('active');
+    let mapPop = new ymaps.Map('map-popup', {
+      center: mapCenter,
+      zoom: 16,
+      controls: []
     });
-  });
-
-  mapPop.controls.remove('searchControl'); // удаляем поиск
-  mapPop.controls.remove('trafficControl'); // удаляем контроль трафика
-  mapPop.controls.remove('typeSelector'); // удаляем тип
-  mapMain.controls.remove('searchControl'); // удаляем поиск
-  mapMain.controls.remove('trafficControl'); // удаляем контроль трафика
-  mapMain.controls.remove('typeSelector'); // удаляем тип
-  mapPop.geoObjects.add(new ymaps.Placemark([56.351679, 43.870314], {
-    iconCaption: 'ЖК Преображение'
-  }, {
-    preset: 'islands#redHomeIcon',
-    iconColor: 'green'
-  }));
-  mapMain.geoObjects.add(new ymaps.Placemark([56.351679, 43.870314], {
-    iconCaption: 'ЖК Преображение'
-  }, {
-    preset: 'islands#redHomeIcon',
-    iconColor: 'green'
-  }));
-  const mapExtand = document.querySelector('.map__open-extend');
-  const mapReduce = document.querySelector('.map__open-reduce');
-  const mapPopup = document.querySelector('.popup-map');
-  mapExtand.addEventListener('click', () => {
-    mapPopup.classList.add('active');
-    disableScroll()
-  });
-  mapReduce.addEventListener('click', () => {
-    mapPopup.classList.remove('active');
-    enableScroll()
-  });
+    var searchControl = new ymaps.control.SearchControl({
+      options: {
+        provider: 'yandex#search',
+        noPopup: true,
+        noSuggestPanel: true,
+        boundedBy: [[56.351579, 43.873214], [56.351779, 43.873414]]
+      }
+    });
+    var searchControl1 = new ymaps.control.SearchControl({
+      options: {
+        provider: 'yandex#search',
+        noPopup: true,
+        noSuggestPanel: true,
+        boundedBy: [[56.351579, 43.873214], [56.351779, 43.873414]]
+      }
+    });
+    mapPop.controls.add(searchControl1);
+    mapMain.controls.add(searchControl);
+    searchControl.search('Магазины');
+    searchControl1.search('Магазины');
+    const mapTab = document.querySelector('.map__nav');
+    const mapTabs = mapTab.querySelectorAll('.tabs__nav-btn');
+    const mapTabPopup = document.querySelector('.map__nav-popup');
+    const mapTabsPopup = mapTabPopup.querySelectorAll('.tabs__nav-btn');
+    mapTabs.forEach((el,idx) => {
+      el.addEventListener('click', () => {
+        mapTabs.forEach(elem => {
+          elem.classList.remove('active');
+        });
+        mapTabsPopup.forEach(elem => {
+          elem.classList.remove('active');
+        });
+        searchControl.search(el.getAttribute("data-map"));
+        searchControl1.search(el.getAttribute("data-map"));
+        mapTabs[idx].classList.add('active');
+        mapTabsPopup[idx].classList.add('active');
+      });
+    });
+    mapTabsPopup.forEach((el,idx) => {
+      el.addEventListener('click', () => {
+        mapTabsPopup.forEach(elem => {
+          elem.classList.remove('active');
+        });
+        mapTabs.forEach(elem => {
+          elem.classList.remove('active');
+        });
+        searchControl.search(el.getAttribute("data-map"));
+        searchControl1.search(el.getAttribute("data-map"));
+        mapTabs[idx].classList.add('active');
+        mapTabsPopup[idx].classList.add('active');
+      });
+    });
+  
+    mapPop.controls.remove('searchControl'); // удаляем поиск
+    mapPop.controls.remove('trafficControl'); // удаляем контроль трафика
+    mapPop.controls.remove('typeSelector'); // удаляем тип
+    mapMain.controls.remove('searchControl'); // удаляем поиск
+    mapMain.controls.remove('trafficControl'); // удаляем контроль трафика
+    mapMain.controls.remove('typeSelector'); // удаляем тип
+    mapPop.geoObjects.add(new ymaps.Placemark([56.351679, 43.870314], {
+      iconCaption: 'ЖК Преображение'
+    }, {
+      preset: 'islands#redHomeIcon',
+      iconColor: 'green'
+    }));
+    mapMain.geoObjects.add(new ymaps.Placemark([56.351679, 43.870314], {
+      iconCaption: 'ЖК Преображение'
+    }, {
+      preset: 'islands#redHomeIcon',
+      iconColor: 'green'
+    }));
+    const mapExtand = document.querySelector('.map__open-extend');
+    const mapReduce = document.querySelector('.map__open-reduce');
+    const mapPopup = document.querySelector('.popup-map');
+    mapExtand.addEventListener('click', () => {
+      mapPopup.classList.add('active');
+      disableScroll()
+    });
+    mapReduce.addEventListener('click', () => {
+      mapPopup.classList.remove('active');
+      enableScroll()
+    });
 }
 if (document.querySelector('#map')) {
   ymaps.ready(init1);
@@ -560,8 +560,11 @@ function initSliders() {
     });
     let rangeValues = [rangeStart, rangeEnd];
     rangeSlider.noUiSlider.on('update', function (values, handle) {
-      rangeValues[handle].value = item.classList.contains("integer") ? parseInt(values[handle]) : values[handle]
+      rangeValues[handle].value = item.classList.contains("filter-range--floor") ? parseInt(values[handle]) : values[handle]
       setRangeSelected(item, rangeSlider, min, max)
+    });
+    rangeSlider.noUiSlider.on('end', function (values, handle) {
+      $(document).find('#eFiltr').trigger('submit');
     });
   })
 }
@@ -581,7 +584,6 @@ function setRangeSelected(item, rangeSlider, min, max) {
 }
 //showResetBtn
 function showResetBtn() {
-  console.log("fff")
   if (document.querySelector(".rangeStartMinDiff") || document.querySelector(".filter-form__room input:checked")) {
     $(".filter-form__reset").slideDown()
     $(".filter__mob").slideDown()
@@ -609,8 +611,17 @@ if (filter) {
       item.querySelector(".filter-range__body").noUiSlider.set([+item.getAttribute("data-min"),+item.getAttribute("data-max")]) 
     }) 
     document.querySelector(".filter-selected__items-flats").innerHTML = "" 
+    $(document).find('#eFiltr').trigger('submit');
   }) 
-  document.querySelector(".filter-form .filter-form__btn--submit").addEventListener("click", () => closeModal(document.querySelector(".filter-form")))
+  document.querySelector(".filter-form").addEventListener("click", e => {
+    if (document.querySelector(".filter-form .filter-form__btn--submit").contains(e.target)) {
+      closeModal(document.querySelector(".filter-form"))
+    } 
+    if (document.querySelector(".filter-form__btn--reset").contains(e.target)) {
+      e.preventDefault()
+      filter.querySelector(".filter-form").reset()
+    }
+  })
   document.querySelector(".filter__header .filter-form__btn").addEventListener("click", () => filter.querySelector(".filter-form").reset())
   document.querySelectorAll(".filter-form__room").forEach(item => {
     item.querySelector("input").addEventListener("change", () => {
